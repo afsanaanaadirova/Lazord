@@ -1,0 +1,1163 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none; }
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0; }
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+img {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+* a {
+  text-decoration: none; }
+  * a:hover {
+    text-decoration: none; }
+* li {
+  list-style-type: none; }
+
+.containerclass {
+  padding: 40px 140px; }
+
+.navsec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 140px;
+  z-index: 9999; }
+  .navsec .menu .menuin {
+    display: flex;
+    justify-content: space-between; }
+    .navsec .menu .menuin .logo img {
+      max-width: 23%; }
+    .navsec .menu .menuin .menunav {
+      display: block; }
+      .navsec .menu .menuin .menunav ul {
+        display: flex;
+        justify-content: space-around; }
+        .navsec .menu .menuin .menunav ul li {
+          padding-left: 22px; }
+          .navsec .menu .menuin .menunav ul li a {
+            color: #fff;
+            font-size: 17px; }
+    .navsec .menu .menuin .menunav li.liactive a {
+      color: #7cb342; }
+  .navsec .menu.fixed {
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    background: #fff;
+    padding: 30px 150px;
+    z-index: 1;
+    border-bottom: 1px solid #ede9e9;
+    top: 0;
+    left: 0; }
+    .navsec .menu.fixed .menunav a {
+      color: #222 !important; }
+    .navsec .menu.fixed .menunav li.liactive a {
+      color: #7cb342 !important; }
+    .navsec .menu.fixed .containerclass {
+      padding: 0; }
+
+.active_menu {
+  display: none; }
+
+header {
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  widows: 100%;
+  position: relative;
+  z-index: 999; }
+  header h1,
+  header p,
+  header i {
+    color: white; }
+  header::before {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(33, 33, 33, 0.8);
+    z-index: -1; }
+  header .body {
+    position: relative;
+    top: -31px;
+    left: -19px; }
+    header .body .circle_me {
+      width: 10%;
+      position: absolute;
+      left: 46%;
+      top: 162px;
+      padding: 5px; }
+      header .body .circle_me img {
+        width: 100%;
+        border-radius: 50%; }
+      header .body .circle_me::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute; }
+    header .body .text {
+      position: absolute;
+      top: 317px;
+      left: 36%; }
+      header .body .text h1 {
+        font-size: 52px; }
+      header .body .text p {
+        font-size: 21px;
+        padding-left: 21%;
+        line-height: 40px; }
+    header .body .icons {
+      position: absolute;
+      top: 413px;
+      left: 43%;
+      width: 17%; }
+      header .body .icons ul {
+        display: flex;
+        justify-content: space-around; }
+        header .body .icons ul li {
+          border: 1px solid #4c4545fa;
+          border-radius: 5px;
+          background: transparent;
+          padding: 7px 9px;
+          transition: all .5s; }
+          header .body .icons ul li i {
+            font-size: 14px; }
+          header .body .icons ul li:hover {
+            background-color: #7cb342; }
+
+.section1 .title {
+  margin-bottom: 18px; }
+  .section1 .title h1 {
+    font-size: 40px; }
+  .section1 .title h4 {
+    font-size: 25px; }
+.section1 .about {
+  display: flex;
+  justify-content: space-between; }
+  .section1 .about .left {
+    width: calc(60% - 10px); }
+    .section1 .about .left p {
+      font-size: 20px;
+      line-height: 28px; }
+    .section1 .about .left .list {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px -106px; }
+      .section1 .about .left .list a {
+        color: #757575; }
+      .section1 .about .left .list li {
+        margin-top: 12px;
+        font-size: 20px; }
+    .section1 .about .left .btns {
+      margin-top: 32px; }
+      .section1 .about .left .btns button {
+        border: 1px solid #7cb342;
+        background-color: #7cb342;
+        border-radius: 4px;
+        padding: 11px; }
+        .section1 .about .left .btns button a {
+          color: white; }
+      .section1 .about .left .btns .btn2 {
+        background-color: #fff !important;
+        padding: 11px 20px; }
+        .section1 .about .left .btns .btn2 a {
+          color: #757575; }
+  .section1 .about .right {
+    width: calc(40% - 10px); }
+    .section1 .about .right div.dioprogress_radius {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+    .section1 .about .right div.dioprogress_size_l {
+      height: 2px; }
+    .section1 .about .right div.dioprogress_size_xl {
+      height: 10px; }
+    .section1 .about .right div.dioprogress_padding {
+      padding: 1px; }
+    .section1 .about .right .percentCount {
+      margin-top: -24px !important;
+      color: #9a9a9a; }
+    .section1 .about .right h3 {
+      font-size: 20px;
+      margin-bottom: 11px; }
+
+.section2 {
+  background-color: #f5f5f5; }
+  .section2 .title {
+    text-align: center;
+    margin-bottom: 30px; }
+    .section2 .title h1 {
+      font-size: 30px;
+      margin-bottom: 25px; }
+    .section2 .title p {
+      font-size: 19px; }
+  .section2 .boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .section2 .boxs .box {
+      background-color: white;
+      width: 30%;
+      border: 1px solid #dedede;
+      text-align: center;
+      padding: 53px 30px;
+      margin: 12px 13px;
+      border-radius: 3%;
+      transition: all .5s; }
+      .section2 .boxs .box:hover {
+        box-shadow: 2px 6px 11px 5px #d2d6dc; }
+      .section2 .boxs .box h1 {
+        margin-top: 17px;
+        font-size: 30px; }
+      .section2 .boxs .box p {
+        margin-top: 10px;
+        line-height: 29px;
+        font-size: 19px; }
+      .section2 .boxs .box i {
+        font-size: 40px;
+        color: #7cb342; }
+
+.section3 {
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; }
+  .section3::before {
+    content: '';
+    background-color: #2222228f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .section3 .progresssec {
+    display: flex;
+    justify-content: space-between; }
+    .section3 .progresssec .div {
+      z-index: 9;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      .section3 .progresssec .div i {
+        color: #7cb342;
+        font-size: 30px; }
+      .section3 .progresssec .div h5 {
+        color: white;
+        font-size: 22px; }
+      .section3 .progresssec .div span {
+        margin: 16px 0;
+        font-size: 34px;
+        color: #7cb342; }
+
+.section4 {
+  background-color: #f5f5f5; }
+  .section4 .title {
+    text-align: center;
+    margin-bottom: 60px; }
+    .section4 .title h1 {
+      font-size: 30px;
+      margin-bottom: 25px; }
+    .section4 .title p {
+      font-size: 19px; }
+  .section4 .category ul {
+    display: flex;
+    justify-content: center; }
+    .section4 .category ul li {
+      background: white;
+      padding: 6px 12px;
+      border-radius: 9%;
+      margin-left: 6px;
+      border: 1px solid #e2dcdcba; }
+      .section4 .category ul li a {
+        color: #222; }
+  .section4 .category li.liactive {
+    background: #7cb342; }
+    .section4 .category li.liactive a {
+      color: #fff; }
+  .section4 .grid {
+    width: 100%;
+    margin-top: 30px; }
+    .section4 .grid .grid-item {
+      width: 33.3%;
+      padding: 6px;
+      border-radius: 11px;
+      border: none;
+      overflow: hidden; }
+      .section4 .grid .grid-item:hover .top {
+        top: 92px;
+        opacity: 1; }
+      .section4 .grid .grid-item:hover .bottom {
+        top: 18%;
+        opacity: 1;
+        margin-top: -37px; }
+      .section4 .grid .grid-item:hover .center {
+        opacity: 1; }
+      .section4 .grid .grid-item .center {
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .7s;
+        z-index: 3;
+        text-align: center; }
+      .section4 .grid .grid-item .overlaycenter {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%); }
+      .section4 .grid .grid-item .overlay {
+        position: absolute;
+        left: 0;
+        width: 96.7%;
+        height: 57%;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 2;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        margin: 6px;
+        margin-top: 6px;
+        border-radius: 8px; }
+      .section4 .grid .grid-item .top {
+        top: -75%; }
+      .section4 .grid .grid-item .bottom {
+        bottom: -75%; }
+    .section4 .grid img {
+      max-width: 100%;
+      border-radius: 9px; }
+
+.section5 {
+  background-image: url("../img/bg3.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .section5::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #252121bf; }
+  .section5 .title {
+    text-align: center;
+    padding: 0 0 90px 0;
+    position: relative;
+    z-index: 1; }
+    .section5 .title h1 {
+      color: white; }
+    .section5 .title span {
+      color: black; }
+    .section5 .title h1 {
+      font-size: 58px; }
+    .section5 .title .icon {
+      position: relative;
+      padding: 50px 0 0 0; }
+      .section5 .title .icon i {
+        background: white;
+        padding: 22px;
+        color: #7cb342;
+        border-radius: 9px; }
+    .section5 .title span {
+      position: absolute;
+      top: 95%;
+      left: 48%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 24px 0 20px;
+      border-color: white transparent transparent transparent; }
+  .section5 .owl-carousel .item {
+    padding: 0 220px; }
+    .section5 .owl-carousel .item p,
+    .section5 .owl-carousel .item h5 {
+      text-align: center;
+      color: white; }
+    .section5 .owl-carousel .item p {
+      font-size: 26px; }
+    .section5 .owl-carousel .item h5 {
+      font-size: 20px; }
+    .section5 .owl-carousel .item h3 {
+      color: #7cb342;
+      text-align: center;
+      margin-top: 30px; }
+  .section5 .owl-carousel .owl-nav {
+    display: none; }
+  .section5 .owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 30px; }
+    .section5 .owl-carousel .owl-dots .owl-dot {
+      background: transparent;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-left: 13px;
+      border: 1px solid white; }
+    .section5 .owl-carousel .owl-dots .active {
+      background-color: #7cb342; }
+
+.section6 {
+  background-color: #e0e0e07a; }
+  .section6 .title {
+    text-align: center;
+    margin-bottom: 60px; }
+    .section6 .title h1 {
+      font-size: 30px;
+      margin-bottom: 25px; }
+    .section6 .title p {
+      font-size: 19px; }
+  .section6 .blog {
+    display: flex;
+    justify-content: space-between; }
+    .section6 .blog .item {
+      border: 1px solid #ccc;
+      position: relative;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white; }
+      .section6 .blog .item .img {
+        overflow: hidden;
+        position: relative; }
+        .section6 .blog .item .img img {
+          width: 100%;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          transition: all .9s;
+          overflow: hidden; }
+          .section6 .blog .item .img img:hover {
+            transform: scale(1.1); }
+        .section6 .blog .item .img h3 {
+          width: 21%;
+          border-radius: 10px;
+          background-color: #fff;
+          padding: 5px;
+          text-align: center;
+          border: 1px solid #eee;
+          position: absolute;
+          color: #7cb342;
+          top: 96% !important;
+          left: 42% !important; }
+      .section6 .blog .item p {
+        padding: 13px;
+        line-height: 22px; }
+      .section6 .blog .item h1 {
+        margin-top: 50px; }
+      .section6 .blog .item .text {
+        padding: 18px 20px 35px; }
+    .section6 .blog .dif {
+      margin: 0 50px; }
+
+.section7 .title {
+  text-align: center;
+  margin-bottom: 60px; }
+  .section7 .title h1 {
+    font-size: 30px;
+    margin-bottom: 25px; }
+  .section7 .title p {
+    font-size: 19px; }
+.section7 .inputdiv {
+  display: flex;
+  justify-content: space-between; }
+.section7 button {
+  width: 15%;
+  border: 1px solid #7cb342;
+  color: #fff;
+  background-color: #7cb342;
+  padding: 11px 20px;
+  border-radius: 4px;
+  padding: 13px;
+  margin: 17px 43%; }
+  .section7 button a {
+    color: white; }
+.section7 .head {
+  display: flex;
+  justify-content: space-around; }
+
+.section8 .containerclassdif {
+  padding: 40px 140px 0 140px; }
+.section8 .contact {
+  background-color: #212121;
+  position: relative; }
+  .section8 .contact::before {
+    content: "";
+    left: -15px;
+    border-top-left-radius: 5px;
+    background: #212121;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0; }
+  .section8 .contact::after {
+    content: "";
+    right: -15px;
+    border-top-right-radius: 5px;
+    background: #212121;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0; }
+  .section8 .contact ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0; }
+    .section8 .contact ul h3,
+    .section8 .contact ul h4 {
+      text-align: center;
+      color: white; }
+    .section8 .contact ul i {
+      text-align: center;
+      color: #7cb342 !important;
+      margin-left: 58px; }
+
+.section9 {
+  background: #212121;
+  position: relative;
+  padding: 40px 0 0 0; }
+  .section9 .logo {
+    position: absolute;
+    top: 39px;
+    left: 16%; }
+    .section9 .logo img {
+      max-width: 15%; }
+  .section9 img {
+    max-width: 10%;
+    margin-left: 42%;
+    margin-top: -43px; }
+  .section9 .icons {
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    width: 17%; }
+    .section9 .icons ul {
+      display: flex;
+      justify-content: space-around; }
+      .section9 .icons ul li {
+        border: 1px solid #4c4545fa;
+        border-radius: 5px;
+        background: transparent;
+        padding: 7px 9px;
+        transition: all .5s; }
+        .section9 .icons ul li i {
+          font-size: 14px; }
+        .section9 .icons ul li:hover {
+          background-color: #7cb342; }
+        .section9 .icons ul li a {
+          color: white; }
+  .section9 h5 {
+    text-align: center;
+    color: white; }
+  .section9 hr {
+    color: white; }
+
+.firstpage {
+  width: 42px;
+  height: 45px;
+  background: #a3a7aa;
+  position: fixed;
+  z-index: 2000;
+  color: white;
+  text-align: center;
+  right: 15px;
+  bottom: 15px;
+  line-height: 45px;
+  font-size: 20px;
+  opacity: 0.9;
+  transition: 0.5s;
+  border-radius: 6px; }
+  .firstpage:hover {
+    background: #676868; }
+    .firstpage:hover i {
+      color: white; }
+
+@media (max-width: 992px) {
+  .navsec .menu .menuin .menunav {
+    display: none; }
+
+  .containerclass {
+    padding: 40px 22px !important; }
+
+  header .body .circle_me {
+    width: 20%;
+    top: 102px;
+    left: 50%; }
+  header .body .text {
+    left: 39%; }
+    header .body .text h1 {
+      font-size: 38px; }
+    header .body .text p {
+      padding-left: 17%; }
+  header .body .icons {
+    left: 48%; }
+    header .body .icons li {
+      margin-left: 5px; }
+
+  .navsec {
+    padding: 40px 20px; }
+    .navsec .containerclass {
+      padding: 0 !important; }
+    .navsec .menu {
+      position: relative;
+      top: 20px; }
+      .navsec .menu .menunav {
+        position: absolute;
+        top: 61px;
+        width: 100%;
+        left: 0;
+        z-index: 9;
+        background: white;
+        right: 0; }
+        .navsec .menu .menunav ul {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 20px; }
+          .navsec .menu .menunav ul li {
+            padding-top: 24px; }
+            .navsec .menu .menunav ul li a {
+              color: black !important; }
+      .navsec .menu .menunav li.liactive a {
+        color: #7cb342 !important; }
+    .navsec .menu.fixed {
+      position: fixed;
+      width: 100%;
+      height: 85px;
+      background: #fff;
+      padding: 30px 19px;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid #ede9e9; }
+      .navsec .menu.fixed .menunav a {
+        color: black !important; }
+      .navsec .menu.fixed .menunav li.liactive a {
+        color: #7cb342 !important; }
+      .navsec .menu.fixed .containerclass {
+        padding: 0 !important; }
+      .navsec .menu.fixed .logo img {
+        max-width: 27%; }
+      .navsec .menu.fixed .burger span {
+        background-color: #222 !important; }
+
+  .burger {
+    width: 56px;
+    height: 100px;
+    position: relative;
+    cursor: pointer; }
+    .burger span {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 2px; }
+      .burger span:nth-child(1) {
+        top: 0px; }
+      .burger span:nth-child(2) {
+        top: 12px; }
+      .burger span:nth-child(3) {
+        top: 24px; }
+
+  .activeburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: all .5s; }
+    .activeburger span:nth-child(1) {
+      top: 5px;
+      transform: rotate(133deg); }
+    .activeburger span:nth-child(2) {
+      top: 12px;
+      display: none; }
+    .activeburger span:nth-child(3) {
+      top: 7px;
+      transform: rotate(-137deg); }
+
+  .section1 .about {
+    display: flex;
+    flex-direction: column; }
+    .section1 .about .left {
+      width: 100%; }
+      .section1 .about .left .list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 !important; }
+      .section1 .about .left .btns {
+        display: flex;
+        justify-content: space-around;
+        width: 32%; }
+    .section1 .about .right {
+      width: 100%;
+      margin-top: 30px; }
+      .section1 .about .right h3 {
+        font-size: 20px;
+        margin-bottom: 24px; }
+
+  .section2 .containerclass {
+    padding: 40px 33px !important; }
+  .section2 .boxs {
+    display: flex; }
+    .section2 .boxs .box {
+      width: calc(50% - 5px);
+      margin: 15px 0; }
+    .section2 .boxs img {
+      display: none; }
+
+  .section3 .progresssec {
+    display: flex;
+    flex-wrap: wrap; }
+    .section3 .progresssec .div {
+      width: calc(50% - 5px);
+      margin: 15px 0; }
+
+  .section4 .grid-item {
+    width: calc(50% - 5px) !important; }
+
+  .section5 .containerclass {
+    padding: 40px 12px !important; }
+  .section5 .title span {
+    position: absolute;
+    top: 95%;
+    left: 47%; }
+  .section5 .owl-carousel .item {
+    padding: 0 130px; }
+
+  .section6 .containerclass {
+    padding: 40px 26px !important; }
+  .section6 .blog {
+    display: flex;
+    flex-direction: column; }
+    .section6 .blog .dif {
+      margin: 35px 0; }
+    .section6 .blog .item {
+      width: 85%;
+      margin-left: 9%; }
+
+  .section7 button {
+    width: 39%;
+    margin: 17px 31%; }
+  .section7 .inputdiv {
+    display: flex;
+    flex-direction: column; }
+
+  .section8 .containerclassdif {
+    padding: 40px 25px 0 25px; }
+  .section8 .contact ul {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0; }
+    .section8 .contact ul i {
+      margin-left: 47%;
+      margin-top: 78px; }
+
+  .section9 .logo {
+    left: 0; }
+  .section9 .icons ul li {
+    margin-left: 5px; }
+
+  #respon .flex_ {
+    display: flex; }
+    #respon .flex_ .item {
+      width: calc(50% - 5px); }
+
+  .active_menu {
+    display: block !important; }
+    .active_menu .burger {
+      width: 80px;
+      height: 100px;
+      position: relative;
+      cursor: pointer; }
+      .active_menu .burger span {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 2px; }
+        .active_menu .burger span:nth-child(1) {
+          top: 0px;
+          transform: rotate(130deg); }
+        .active_menu .burger span:nth-child(2) {
+          top: 12px;
+          display: none; }
+        .active_menu .burger span:nth-child(3) {
+          top: 24px;
+          transform: rotate(-130deg); } }
+@media (max-width: 768px) {
+  header .body .circle_me {
+    width: 31%;
+    left: 40%;
+    top: 158px; }
+  header .body .text {
+    left: 15%; }
+
+  .navsec .burger {
+    width: 100px; }
+
+  .section1 .btns {
+    width: 70% !important; }
+
+  .section2 .containerclass {
+    padding: 40px 33px !important; }
+  .section2 .boxs {
+    display: flex;
+    flex-direction: column; }
+    .section2 .boxs .box {
+      width: 100%;
+      margin: 15px 0; }
+    .section2 .boxs img {
+      display: none; }
+
+  .section3 .progresssec {
+    display: flex;
+    flex-direction: column; }
+    .section3 .progresssec .div {
+      margin: auto;
+      margin-top: 15px; }
+
+  .section4 .grid-item {
+    width: 100% !important; }
+
+  .section5 .title span {
+    position: absolute;
+    top: 95%;
+    left: 45%; }
+  .section5 .owl-carousel .item {
+    padding: 0; }
+
+  .active11 {
+    visibility: hidden;
+    opacity: 0; }
+
+  .active12 {
+    visibility: inherit;
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */

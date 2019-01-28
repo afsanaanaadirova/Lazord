@@ -1,0 +1,15 @@
+*{
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    li{
+        list-style-type: none;
+    }
+}
+$base-color: #7cb342;
+$text1-color: #fff;
+$text2-color: #21212e;
+$text3-color: #757575;
